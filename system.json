@@ -15,5 +15,23 @@
       "email": "n/a",
       "discord": "Birael#9045"
     }
-  ]
+  ],
+  "scripts": [],
+  "esmodules": [],
+  "styles": [],
+  "packs": [],
+  "languages": [
+    {
+      "lang": "en",
+      "name": "English",
+      "path": "lang/en.json"
+    }
+  ],
+  "gridDistance": 10,
+  "gridUnits": "ft",
+  "primaryTokenAttribute": "resources.health",
+  "secondaryTokenAttribute": "resources.power",
+  "url": "https://github.com/Birael/ritualtek",
+  "manifest": "https://github.com/Birael/ritualtek/system.json",
+  "download": "https://github.com/Birael/ritualtek/archive/refs/heads/main.zip"
 }
