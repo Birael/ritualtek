@@ -1,0 +1,19 @@
+{
+  "id": "ritualtek",
+  "title": "RitualTek",
+  "description": "Testing out a new system for FoundryVTT.",
+  "version": "0.0.1",
+  "compatibility": {
+    "minimum": "10",
+    "verified": "10",
+    "maximum": "10"
+  },
+  "authors": [
+    {
+      "name": "Ryan Spencer",
+      "url": "n/a",
+      "email": "n/a",
+      "discord": "Birael#9045"
+    }
+  ]
+}
