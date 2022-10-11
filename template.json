@@ -15,14 +15,12 @@
         "tension": {
           "min": 0,
           "value": 0,
-          "max": 10
+          "max": 100
         },
         "armor": {
-          "min": 0,
           "value": 0
         },
         "defense": {
-          "min": 0,
           "value": 0
         }
       },
