@@ -1,5 +1,5 @@
 {
-  "id": "ritualtek",
+  "name": "ritualtek",
   "title": "RitualTek",
   "description": "Testing out a new system for FoundryVTT.",
   "version": "0.0.1",
@@ -10,27 +10,30 @@
   },
   "authors": [
     {
-      "name": "Ryan Spencer",
-      "url": "n/a",
-      "email": "n/a",
+      "name": "Birael",
       "discord": "Birael#9045"
     }
   ],
-  "scripts": [],
-  "esmodules": [],
-  "styles": [],
-  "packs": [],
-  "languages": [
-    {
-      "lang": "en",
-      "name": "English",
-      "path": "lang/en.json"
-    }
+  "scripts": [
+    
   ],
-  "gridDistance": 10,
+  "esmodules": [
+    
+  ],
+  "styles": [
+    
+  ],
+  "packs": [
+    
+  ],
+  "languages": [
+    
+  ],
+  "gridDistance": 5,
   "gridUnits": "ft",
   "primaryTokenAttribute": "resources.health",
-  "secondaryTokenAttribute": "resources.power",
+  "secondaryTokenAttribute": "resources.tension",
+  "initiative": "1d6 + @awareness + @guile",
   "url": "https://github.com/Birael/ritualtek",
   "manifest": "https://github.com/Birael/ritualtek/blob/main/system.json",
   "download": "https://github.com/Birael/ritualtek/archive/refs/heads/main.zip"
