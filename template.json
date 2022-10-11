@@ -1,10 +1,10 @@
 {
   "Actor": {
-    "types": ["character", "pawn", "villain"],
+    "types": ["character", "npc", "personOfInterest"],
     "templates": {
       "background": {
         "biography": "",
-        "hairColor": "blue"
+        "visualDescription": ""
       },
       "resources": {
         "health": {
@@ -12,46 +12,87 @@
           "value": 10,
           "max": 10
         },
-        "power": {
+        "tension": {
           "min": 0,
-          "value": 1,
-          "max": 3
+          "value": 0,
+          "max": 10
+        },
+        "armor": {
+          "min": 0,
+          "value": 0
+        },
+        "defense": {
+          "min": 0,
+          "value": 0
+        }
+      },
+      "baseStats": {
+        "physicality": {
+          "min": 0,
+          "value": 3,
+          "max": 6
+        },
+        "mentality": {
+          "min": 0,
+          "value": 3,
+          "max": 6
+        },
+        "personality": {
+          "min": 0,
+          "value": 3,
+          "max": 6
+        },
+        "acuteness": {
+          "min": 0,
+          "value": 3,
+          "max": 6
+        },
+        "awareness": {
+          "min": 0,
+          "value": 3,
+          "max": 6
+        },
+        "guile": {
+          "min": 0,
+          "value": 3,
+          "max": 6
         }
       }
     },
-    "hero": {
-      "templates": ["background", "resources"],
-      "goodness": {
-        "value": 5,
-        "max": 10
-      }
-    },
-    "pawn": {
-      "templates": ["resources"]
-    },
-    "villain": {
-      "templates": ["background", "resources"],
-      "wickedness": {
-        "value": 5,
+    "character": {
+      "templates": ["background", "resources", "baseStats"],
+      "humanity": {
+        "min": 0,
+        "value": 50,
         "max": 100
       }
+    },
+    "npc": {
+      "templates": ["resources", "baseStats"]
+    },
+    "personOfInterest": {
+      "templates": ["background", "resources", "baseStats"]
     }
   },
   "Item": {
-    "types": ["weapon", "spell"],
+    "types": ["weapon", "skill"],
     "templates": {
       "rarity": {
         "rarity": "Common",
         "price": 20
+      },
+      "itemDescription": {
+        "description": ""
       }
     },
     "weapon": {
-      "templates": ["rarity"],
-      "damage": 5
+      "templates": ["rarity", "itemDescription"],
+      "damage": 0,
+      "value": 5
     },
-    "spell": {
-      "templates": ["rarity"],
-      "cost": 2
+    "skill": {
+      "templates": ["description"],
+      "cost": 1
     }
   }
 }
