@@ -18,16 +18,20 @@
     
   ],
   "esmodules": [
-    
+    "ritualtek.js"
   ],
   "styles": [
-    
+    "ritualtek.css"
   ],
   "packs": [
     
   ],
   "languages": [
-    
+    {
+      "lang": "en",
+      "name": "English",
+      "path": "./lang/en.json"
+    }
   ],
   "gridDistance": 5,
   "gridUnits": "ft",

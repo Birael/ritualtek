@@ -1,96 +1,33 @@
 {
   "Actor": {
-    "types": ["character", "npc", "personOfInterest"],
+    "types": [
+      "pc",
+      "npc"
+    ],
     "templates": {
-      "background": {
-        "biography": "",
-        "visualDescription": ""
-      },
-      "resources": {
+      "stats": {
         "health": {
-          "min": 0,
-          "value": 10,
-          "max": 10
-        },
-        "tension": {
-          "min": 0,
           "value": 0,
-          "max": 100
+          "max": 0
         },
-        "armor": {
-          "value": 0
-        },
-        "defense": {
-          "value": 0
-        }
-      },
-      "baseStats": {
-        "physicality": {
-          "min": 0,
-          "value": 3,
-          "max": 6
-        },
-        "mentality": {
-          "min": 0,
-          "value": 3,
-          "max": 6
-        },
-        "personality": {
-          "min": 0,
-          "value": 3,
-          "max": 6
-        },
-        "acuteness": {
-          "min": 0,
-          "value": 3,
-          "max": 6
-        },
-        "awareness": {
-          "min": 0,
-          "value": 3,
-          "max": 6
-        },
-        "guile": {
-          "min": 0,
-          "value": 3,
-          "max": 6
-        }
+        "armor": 0,
+        "dodge": 0,
+        "speed": 0
       }
-    },
-    "character": {
-      "templates": ["background", "resources", "baseStats"],
-      "humanity": {
-        "min": 0,
-        "value": 50,
-        "max": 100
-      }
-    },
-    "npc": {
-      "templates": ["resources", "baseStats"]
-    },
-    "personOfInterest": {
-      "templates": ["background", "resources", "baseStats"]
     }
   },
   "Item": {
-    "types": ["weapon", "skill"],
+    "types": ["weapon"],
     "templates": {
-      "rarity": {
-        "rarity": "Common",
-        "price": 20
-      },
       "itemDescription": {
         "description": ""
       }
     },
     "weapon": {
-      "templates": ["rarity", "itemDescription"],
+      "templates": ["itemDescription"],
+      "attackWith": "guns",
       "damage": 0,
-      "value": 5
-    },
-    "skill": {
-      "templates": ["description"],
-      "cost": 1
+      "weight": 5
     }
   }
 }
