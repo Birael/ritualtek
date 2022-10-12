@@ -1,0 +1,15 @@
+{
+    "ritualtek": {
+        "attack": {
+            "none": "",
+            "melee": "Melee",
+            "shooting": "Shooting",
+            "gunnery": "Gunnery"
+        },
+        "weapon": {
+            "attackWith": "Attack with:",
+            "damage": "Damage",
+            "weight": "Weight"
+        }
+    }
+}
