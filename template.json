@@ -2,50 +2,50 @@
   "Actor": {
     "types": ["character", "npc"],
     "templates": {
-      "base": {
+      "resources": {
         "health": {
-          "value": 10,
+          "value": 0,
           "min": 0,
-          "max": 10
+          "max": 0
         },
-        "power": {
-          "value": 5,
+        "tension": {
+          "value": 0,
           "min": 0,
-          "max": 5
+          "max": 0
         },
         "biography": ""
       }
     },
     "character": {
-      "templates": ["base"],
+      "templates": ["resources"],
       "attributes": {
         "level": {
           "value": 1
         }
       },
       "abilities": {
-        "str": {
-          "value": 10
+        "phy": {
+          "value": 1
         },
-        "dex": {
-          "value": 10
+        "men": {
+          "value": 1
         },
-        "con": {
-          "value": 10
+        "per": {
+          "value": 1
         },
-        "int": {
-          "value": 10
+        "acu": {
+          "value": 1
         },
-        "wis": {
-          "value": 10
+        "awa": {
+          "value": 1
         },
-        "cha": {
-          "value": 10
+        "gui": {
+          "value": 1
         }
       }
     },
     "npc": {
-      "templates": ["base"],
+      "templates": ["resources"],
       "cr": 0
     }
   },

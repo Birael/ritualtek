@@ -5,19 +5,19 @@ export const RITUALTEK = {};
  * @type {Object}
  */
  RITUALTEK.abilities = {
-  "str": "RITUALTEK.AbilityStr",
-  "dex": "RITUALTEK.AbilityDex",
-  "con": "RITUALTEK.AbilityCon",
-  "int": "RITUALTEK.AbilityInt",
-  "wis": "RITUALTEK.AbilityWis",
-  "cha": "RITUALTEK.AbilityCha"
+  "phy": "RITUALTEK.AbilityPhy",
+  "men": "RITUALTEK.AbilityMen",
+  "per": "RITUALTEK.AbilityPer",
+  "acu": "RITUALTEK.AbilityAcu",
+  "awa": "RITUALTEK.AbilityAwa",
+  "gui": "RITUALTEK.AbilityGui"
 };
 
 RITUALTEK.abilityAbbreviations = {
-  "str": "RITUALTEK.AbilityStrAbbr",
-  "dex": "RITUALTEK.AbilityDexAbbr",
-  "con": "RITUALTEK.AbilityConAbbr",
-  "int": "RITUALTEK.AbilityIntAbbr",
-  "wis": "RITUALTEK.AbilityWisAbbr",
-  "cha": "RITUALTEK.AbilityChaAbbr"
+  "phy": "RITUALTEK.AbilityPhyAbbr",
+  "men": "RITUALTEK.AbilityMenAbbr",
+  "per": "RITUALTEK.AbilityPerAbbr",
+  "acu": "RITUALTEK.AbilityAcuAbbr",
+  "awa": "RITUALTEK.AbilityAwaAbbr",
+  "gui": "RITUALTEK.AbilityGuiAbbr"
 };
