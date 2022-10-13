@@ -1,15 +1,22 @@
 {
-    "ritualtek": {
-        "attack": {
-            "none": "",
-            "melee": "Melee",
-            "shooting": "Shooting",
-            "gunnery": "Gunnery"
-        },
-        "weapon": {
-            "attackWith": "Attack with:",
-            "damage": "Damage",
-            "weight": "Weight"
-        }
-    }
+  "RITUALTEK.AbilityStr": "Strength",
+  "RITUALTEK.AbilityCon": "Constitution",
+  "RITUALTEK.AbilityDex": "Dexterity",
+  "RITUALTEK.AbilityInt": "Intelligence",
+  "RITUALTEK.AbilityWis": "Wisdom",
+  "RITUALTEK.AbilityCha": "Charisma",
+
+  "RITUALTEK.AbilityStrAbbr": "str",
+  "RITUALTEK.AbilityConAbbr": "con",
+  "RITUALTEK.AbilityDexAbbr": "dex",
+  "RITUALTEK.AbilityIntAbbr": "int",
+  "RITUALTEK.AbilityWisAbbr": "wis",
+  "RITUALTEK.AbilityChaAbbr": "cha",
+
+  "RITUALTEK.EffectCreate": "Create Effect",
+  "RITUALTEK.EffectToggle": "Toggle Effect",
+  "RITUALTEK.EffectEdit": "Edit Effect",
+  "RITUALTEK.EffectDelete": "Delete Effect",
+
+  "RITUALTEK.Add": "Add"
 }

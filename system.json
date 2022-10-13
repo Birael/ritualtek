@@ -1,44 +1,34 @@
 {
-  "name": "ritualtek",
+  "id": "ritualtek",
   "title": "RitualTek",
-  "description": "Testing out a new system for FoundryVTT.",
+  "description": "The RitualTek system for FoundryVTT!",
   "version": "0.0.1",
   "compatibility": {
-    "minimum": "10",
-    "verified": "10",
-    "maximum": "10"
+    "minimum": 10,
+    "verified": "10.288",
+    "maximum": 10
   },
-  "authors": [
-    {
-      "name": "Birael",
-      "discord": "Birael#9045"
-    }
-  ],
-  "scripts": [
-    
-  ],
-  "esmodules": [
-    "ritualtek.js"
-  ],
-  "styles": [
-    "ritualtek.css"
-  ],
-  "packs": [
-    
-  ],
+  "authors": [{
+    "name": "Birael"
+  }],
+  "esmodules": ["module/ritualtek.mjs"],
+  "styles": ["css/ritualtek.css"],
+  "scripts": [],
+  "packs": [],
   "languages": [
     {
       "lang": "en",
       "name": "English",
-      "path": "./lang/en.json"
+      "path": "lang/en.json"
     }
   ],
   "gridDistance": 5,
   "gridUnits": "ft",
-  "primaryTokenAttribute": "resources.health",
-  "secondaryTokenAttribute": "resources.tension",
-  "initiative": "1d6 + @awareness + @guile",
-  "url": "https://github.com/Birael/ritualtek",
-  "manifest": "https://github.com/Birael/ritualtek/blob/main/system.json",
-  "download": "https://github.com/Birael/ritualtek/archive/refs/heads/main.zip"
+  "primaryTokenAttribute": "health",
+  "secondaryTokenAttribute": "tension",
+  "url": "",
+  "manifest": "",
+  "download": "",
+  "license": "LICENSE.txt",
+  "changelog": "CHANGELOG.md"
 }
