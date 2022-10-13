@@ -1,2 +1,2 @@
 # mysystem
-Test repo for new TTRPG system for FoundryVTT
+Welcome to the RitualTek system for FoundryVTT.
