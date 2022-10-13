@@ -165,6 +165,13 @@ export class RitualTekActorSheet extends ActorSheet {
         li.addEventListener("dragstart", handler, false);
       });
     }
+
+
+    // Calculate health and power.
+    let he = 10 + (this.actor.system.phy.value * this.actor.system.lvl);
+    this.actor.update({'system.health.max': he})
+    let te = 10 + (this.actor.system.men.value * this.actor.system.lvl);
+    this.actor.update({'system.tension.max': te})
   }
 
   /**
