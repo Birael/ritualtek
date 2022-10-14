@@ -7,7 +7,7 @@
   return loadTemplates([
 
     // Actor partials.
-    "systems/ritualtek/templates/actor/parts/actor-features.html",
+    "systems/ritualtek/templates/actor/parts/actor-skills.html",
     "systems/ritualtek/templates/actor/parts/actor-items.html",
     "systems/ritualtek/templates/actor/parts/actor-spells.html",
     "systems/ritualtek/templates/actor/parts/actor-effects.html",

@@ -50,7 +50,7 @@
     }
   },
   "Item": {
-    "types": ["item", "feature", "spell"],
+    "types": ["item", "skill", "spell"],
     "templates": {
       "base": {
         "description": ""
@@ -62,7 +62,7 @@
       "weight": 0,
       "formula": "d20 + @str.mod + ceil(@lvl / 2)"
     },
-    "feature": {
+    "skill": {
       "templates": ["base"]
     },
     "spell": {
