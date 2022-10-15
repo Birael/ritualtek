@@ -63,7 +63,8 @@
       "formula": "d20 + @str.mod + ceil(@lvl / 2)"
     },
     "skill": {
-      "templates": ["base"]
+      "templates": ["base"],
+      "skillRank": 1
     },
     "spell": {
       "templates": ["base"],
