@@ -1,8 +1,13 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Quantico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chathura&display=swap');
+
 /* Global styles */
 .window-app {
-  font-family: "Roboto", sans-serif;
+  font-family: "Quantico", sans-serif;
+  background: #444;
+  color: #ffffff;
 }
+
 
 .rollable:hover, .rollable:focus {
   color: #000;
@@ -230,8 +235,19 @@
   /* ----------------------------------------- */
   /* Example style for ritualtek (can be removed if not needed) */
 }
+.ritualtek .bottom-left-right {
+  border-bottom: 1px #00eaff;
+  border-left: 1px #00eaff;
+  border-right: 1px #00eaff;
+}
+
 .ritualtek .item-form {
-  font-family: "Roboto", sans-serif;
+  font-family: "Quantico", sans-serif;
+}
+
+.ritualtek .window-content {
+  background: #444;
+  padding: 0px;
 }
 .ritualtek .sheet-header {
   -webkit-box-flex: 0;
@@ -250,14 +266,21 @@
   -webkit-box-pack: start;
   -ms-flex-pack: start;
   justify-content: flex-start;
-  margin-bottom: 10px;
+  margin-bottom: 0px;
+  margin-top: 0px;
+  background: rgb(91, 91, 91);
+  color: #00eaff;
+  padding: 0px;
+  
 }
+
 .ritualtek .sheet-header .profile-img {
   -webkit-box-flex: 0;
-  -ms-flex: 0 0 100px;
-  flex: 0 0 100px;
-  height: 100px;
+  -ms-flex: 0 0 150px;
+  flex: 0 0 150px;
+  height: 150px;
   margin-right: 10px;
+  border-width: 0px;
 }
 .ritualtek .sheet-header .header-fields {
   -webkit-box-flex: 1;
@@ -279,11 +302,42 @@
   -webkit-box-flex: 0;
   -ms-flex: 0;
   flex: 0;
+  background: #444;
+  color: #ffffff;
 }
+
+.ritualtek nav.sheet-tabs {
+  margin: 0px;
+  border-top: 1px solid #00eaff;
+  border-bottom: 1px solid #00eaff;
+}
+
+.tabs .item.active {
+  text-shadow: 0 0 10px #00eaff;
+}
+
+a:hover {
+  text-shadow: 0 0 8px #00eaff;
+}
+
 .ritualtek .sheet-body,
 .ritualtek .sheet-body .tab,
 .ritualtek .sheet-body .tab .editor {
-  height: 100%;
+  height: 97%;
+  background: rgb(91, 91, 91);
+  
+}
+
+.ritualtek .bottom-left-right-border {
+  border-left: 1px solid #00eaff;
+  border-bottom: 1px solid #00eaff;
+  border-right: 1px solid #00eaff;
+}
+
+.ritualtek .main {
+  border-left: 1px solid #00eaff;
+  border-bottom: 1px solid #00eaff;
+  border-right: 1px solid #00eaff;
 }
 .ritualtek .tox .tox-editor-container {
   background: #fff;
@@ -292,8 +346,100 @@
   padding: 0 8px;
 }
 .ritualtek .resource-label {
-  font-weight: bold;
+  
+  color: #ffffff;
 }
+
+.ritualtek .sidebar {
+  
+}
+
+.ritualtek input[name="name"] {
+  color: #ffffff;
+  border: 1px solid #d092f6;
+  width: 170px;
+}
+
+.ritualtek input[name="system.attributes.level.value"] {
+  color: #ffffff;
+  border: 1px solid #d092f6;
+  min-width: 40px;
+  width: 40px;
+}
+.ritualtek input[name="system.speed.value"] {
+  color: #ffffff;
+  border: 1px solid #d092f6;
+  min-width: 40px;
+  width: 40px;
+}
+
+.ritualtek input[name="system.armor.value"] {
+  color: #ffffff;
+  border: 1px solid #d092f6;
+  min-width: 40px;
+  width: 40px;
+}
+
+.ritualtek input[name="system.dodge.value"] {
+  color: #ffffff;
+  border: 1px solid #d092f6;
+  min-width: 40px;
+  width: 40px;
+}
+
+.ritualtek input[name="system.defense.value"] {
+  color: #ffffff;
+  border: 1px solid #d092f6;
+  min-width: 40px;
+  width: 40px;
+}
+
+.ritualtek input[name="system.abilities.phy.value"] {
+  color: #ffffff;
+  border: 1px solid #d092f6;
+  min-width: 40px;
+  width: 40px;
+}
+
+.ritualtek input[name="system.abilities.men.value"] {
+  color: #ffffff;
+  border: 1px solid #d092f6;
+  min-width: 40px;
+  width: 40px;
+}
+
+.ritualtek input[name="system.abilities.per.value"] {
+  color: #ffffff;
+  border: 1px solid #d092f6;
+  min-width: 40px;
+  width: 40px;
+}
+
+.ritualtek input[name="system.abilities.acu.value"] {
+  color: #ffffff;
+  border: 1px solid #d092f6;
+  min-width: 40px;
+  width: 40px;
+}
+
+.ritualtek input[name="system.abilities.awa.value"] {
+  color: #ffffff;
+  border: 1px solid #d092f6;
+  min-width: 40px;
+  width: 40px;
+}
+
+.ritualtek input[name="system.abilities.gui.value"] {
+  color: #ffffff;
+  border: 1px solid #d092f6;
+  min-width: 40px;
+  width: 40px;
+}
+
+.ritualtek input:disabled {
+  border: none;
+}
+
 .ritualtek .items-header {
   height: 28px;
   margin: 2px 0;
@@ -302,8 +448,9 @@
   -ms-flex-align: center;
   align-items: center;
   background: rgba(0, 0, 0, 0.05);
-  border: 2px groove #eeede0;
+  border: 2px groove #00eaff;
   font-weight: bold;
+  
 }
 .ritualtek .items-header > * {
   font-size: 14px;
@@ -316,6 +463,7 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  
 }
 .ritualtek .items-list {
   list-style: none;
@@ -323,7 +471,7 @@
   padding: 0;
   overflow-y: auto;
   scrollbar-width: thin;
-  color: #444;
+  color: rgb(0, 0, 0);
 }
 .ritualtek .items-list .item-list {
   list-style: none;
@@ -365,19 +513,20 @@
   font-size: 12px;
   text-align: center;
   margin: 0 6px;
+  color: #00eaff;
 }
 .ritualtek .items-list .item {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   padding: 0 2px;
-  border-bottom: 1px solid #c9c7b8;
+  border-bottom: 1px solid #d092f6;
 }
 .ritualtek .items-list .item:last-child {
   border-bottom: none;
 }
 .ritualtek .items-list .item .item-name {
-  color: #191813;
+  color: #00fff3;
 }
 .ritualtek .items-list .item .item-name .item-image {
   -webkit-box-flex: 0;
@@ -396,14 +545,18 @@
 }
 .ritualtek .items-list .items-header {
   height: 28px;
-  margin: 2px 0;
+  margin: 5px 0;
+    margin-top: 0;
+    margin-left: 0;
   padding: 0;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background: rgba(0, 0, 0, 0.05);
-  border: 2px groove #eeede0;
-  font-weight: bold;
+  background: rgba(116, 116, 116, 0.478);
+  border-top: 1px solid #00eaff;
+  border-right: 0px solid #00eaff;
+  border-bottom: 1px solid #00eaff;
+  border-left: 0px solid #00eaff;
 }
 .ritualtek .items-list .items-header > * {
   font-size: 12px;

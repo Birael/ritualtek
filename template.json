@@ -13,6 +13,18 @@
           "min": 0,
           "max": 0
         },
+        "armor": {
+          "value": 0
+        },
+        "dodge": {
+          "value": 0
+        },
+        "speed": {
+          "value": 0
+        },
+        "defense": {
+          "value": 0
+        },
         "biography": ""
       }
     },
@@ -64,7 +76,8 @@
     },
     "skill": {
       "templates": ["base"],
-      "skillRank": 1
+      "skillRank": 1,
+      "derivedAttribute": "Physicality"
     },
     "spell": {
       "templates": ["base"],

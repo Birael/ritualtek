@@ -18,7 +18,16 @@
     {{!-- Attributes Tab --}}
     <div class="tab attributes" data-group="primary" data-tab="attributes">
       {{!-- As you add new fields, add them in here! --}}
-      <div class="resource flex-right">
+      <div class="resource grid grid-2col">
+        <label class="resource-label">Derived Attribute</label>
+        <select id="derivedAttribute">
+          <option value="Physicality">Physicality</option>
+          <option value="Mentality">Mentality</option>
+          <option value="Personality">Personality</option>
+          <option value="Acuteness">Acuteness</option>
+          <option value="Awareness">Awareness</option>
+          <option value="Guile">Guile</option>
+        </select>
         <label class="resource-label">Skill Rank</label>
         <input type="text" name="system.skillRank" value="{{system.skillRank}}" data-dtype="Number"/>
       </div>

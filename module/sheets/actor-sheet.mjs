@@ -11,8 +11,8 @@ export class RitualTekActorSheet extends ActorSheet {
     return mergeObject(super.defaultOptions, {
       classes: ["ritualtek", "sheet", "actor"],
       template: "systems/ritualtek/templates/actor/actor-sheet.html",
-      width: 600,
-      height: 600,
+      width: 475,
+      height: 650,
       tabs: [{ navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "skills" }]
     });
   }
@@ -166,12 +166,26 @@ export class RitualTekActorSheet extends ActorSheet {
       });
     }
 
+    // Calculate speed.
+    let sp = this.actor.system.phy.value;
+    this.actor.update({'system.speed.value': sp});
 
     // Calculate health and power.
     let he = 10 + (this.actor.system.phy.value * this.actor.system.lvl);
-    this.actor.update({'system.health.max': he})
+    this.actor.update({'system.health.max': he});
     let te = 10 + (this.actor.system.men.value * this.actor.system.lvl);
-    this.actor.update({'system.tension.max': te})
+    this.actor.update({'system.tension.max': te});
+
+    // Calculate armor and dodge.
+    let a = this.actor.system.phy.value * this.actor.system.lvl;
+    this.actor.update({'system.armor.value': a});
+    let d = (this.actor.system.phy.value + this.actor.system.awa.value) * this.actor.system.lvl;
+    this.actor.update({'system.dodge.value': d});
+
+    // Calculate the character's chance of not being hit.
+    let dth = this.actor.system.armor.value + this.actor.system.dodge.value;
+    this.actor.update({'system.defense.value': dth});
+
   }
 
   /**
