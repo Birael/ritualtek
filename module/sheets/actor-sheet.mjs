@@ -11,9 +11,9 @@ export class RitualTekActorSheet extends ActorSheet {
     return mergeObject(super.defaultOptions, {
       classes: ["ritualtek", "sheet", "actor"],
       template: "systems/ritualtek/templates/actor/actor-sheet.html",
-      width: 600,
-      height: 600,
-      tabs: [{ navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "features" }]
+      width: 475,
+      height: 650,
+      tabs: [{ navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "skills" }]
     });
   }
 
@@ -82,8 +82,10 @@ export class RitualTekActorSheet extends ActorSheet {
    */
   _prepareItems(context) {
     // Initialize containers.
-    const gear = [];
-    const features = [];
+    const weapons = [];
+    const clothing = [];
+    const items = [];
+    const skills = [];
     const spells = {
       0: [],
       1: [],
@@ -100,13 +102,21 @@ export class RitualTekActorSheet extends ActorSheet {
     // Iterate through items, allocating to containers
     for (let i of context.items) {
       i.img = i.img || DEFAULT_TOKEN;
-      // Append to gear.
-      if (i.type === 'item') {
-        gear.push(i);
+      // Append to weapons.
+      if (i.type === 'weapon') {
+        weapons.push(i);
       }
-      // Append to features.
-      else if (i.type === 'feature') {
-        features.push(i);
+      // Append to clothing.
+      if (i.type === 'clothing') {
+        clothing.push(i);
+      }
+      // Append to items.
+      if (i.type === 'item') {
+        items.push(i);
+      }
+      // Append to skills.
+      else if (i.type === 'skill') {
+        skills.push(i);
       }
       // Append to spells.
       else if (i.type === 'spell') {
@@ -117,8 +127,10 @@ export class RitualTekActorSheet extends ActorSheet {
     }
 
     // Assign and return
-    context.gear = gear;
-    context.features = features;
+    context.weapons = weapons;
+    context.clothing = clothing;
+    context.items = items;
+    context.skills = skills;
     context.spells = spells;
   }
 
@@ -166,12 +178,26 @@ export class RitualTekActorSheet extends ActorSheet {
       });
     }
 
+    // Calculate speed.
+    let sp = this.actor.system.phy.value;
+    this.actor.update({'system.speed.value': sp});
 
     // Calculate health and power.
     let he = 10 + (this.actor.system.phy.value * this.actor.system.lvl);
-    this.actor.update({'system.health.max': he})
+    this.actor.update({'system.health.max': he});
     let te = 10 + (this.actor.system.men.value * this.actor.system.lvl);
-    this.actor.update({'system.tension.max': te})
+    this.actor.update({'system.tension.max': te});
+
+    // Calculate armor and dodge.
+    let a = this.actor.system.phy.value * this.actor.system.lvl;
+    this.actor.update({'system.armor.value': a});
+    let d = (this.actor.system.phy.value + this.actor.system.awa.value) * this.actor.system.lvl;
+    this.actor.update({'system.dodge.value': d});
+
+    // Calculate the character's chance of not being hit.
+    let dth = this.actor.system.armor.value + this.actor.system.dodge.value;
+    this.actor.update({'system.defense.value': dth});
+
   }
 
   /**

@@ -10,7 +10,7 @@ export class RitualTekItemSheet extends ItemSheet {
       classes: ["ritualtek", "sheet", "item"],
       width: 520,
       height: 480,
-      tabs: [{ navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "description" }]
+      tabs: [{ navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "attributes" }]
     });
   }
 
@@ -59,5 +59,28 @@ export class RitualTekItemSheet extends ItemSheet {
     if (!this.isEditable) return;
 
     // Roll handlers, click handlers, etc. would go here.
+
+    //var da = this.item.system.derivedAttribute;
+    var curItem = this;
+    console.log(curItem.item.system.derivedAttribute);
+    
+    
+
+    var selector = document.getElementById('derivedAttribute');
+    if (selector) {
+      selector.onchange = handleSelectChange;
+      selector.value = curItem.item.system.derivedAttribute;
+    }
+    
+
+    function handleSelectChange(event) {
+      var selectElement = event.target;
+      var value = selectElement.value;
+      
+      curItem.item.system.derivedAttribute = value;
+      console.log(curItem.item.system.derivedAttribute);
+    }
+    
+    
   }
 }

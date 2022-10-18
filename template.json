@@ -13,6 +13,18 @@
           "min": 0,
           "max": 0
         },
+        "armor": {
+          "value": 0
+        },
+        "dodge": {
+          "value": 0
+        },
+        "speed": {
+          "value": 0
+        },
+        "defense": {
+          "value": 0
+        },
         "biography": ""
       }
     },
@@ -50,20 +62,33 @@
     }
   },
   "Item": {
-    "types": ["item", "feature", "spell"],
+    "types": ["weapon","clothing","item", "skill", "spell"],
     "templates": {
       "base": {
         "description": ""
+      },
+      "gear": {
+        "cost": 0,
+        "weight": 0
       }
     },
-    "item": {
-      "templates": ["base"],
-      "quantity": 1,
-      "weight": 0,
-      "formula": "d20 + @str.mod + ceil(@lvl / 2)"
+    "weapon": {
+      "templates": ["base", "gear"],
+      "damage": 0,
+      "formula": "d20 + @phy.value"
     },
-    "feature": {
-      "templates": ["base"]
+    "clothing": {
+      "templates": ["base", "gear"],
+      "armor": 0
+    },
+    "item": {
+      "templates": ["base", "gear"],
+      "quantity": 1
+    },
+    "skill": {
+      "templates": ["base"],
+      "skillRank": 1,
+      "derivedAttribute": "Physicality"
     },
     "spell": {
       "templates": ["base"],
