@@ -62,17 +62,28 @@
     }
   },
   "Item": {
-    "types": ["item", "skill", "spell"],
+    "types": ["weapon","clothing","item", "skill", "spell"],
     "templates": {
       "base": {
         "description": ""
+      },
+      "gear": {
+        "cost": 0,
+        "weight": 0
       }
     },
+    "weapon": {
+      "templates": ["base", "gear"],
+      "damage": 0,
+      "formula": "d20 + @phy.value"
+    },
+    "clothing": {
+      "templates": ["base", "gear"],
+      "armor": 0
+    },
     "item": {
-      "templates": ["base"],
-      "quantity": 1,
-      "weight": 0,
-      "formula": "d20 + @str.mod + ceil(@lvl / 2)"
+      "templates": ["base", "gear"],
+      "quantity": 1
     },
     "skill": {
       "templates": ["base"],

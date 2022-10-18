@@ -228,6 +228,103 @@
   text-align: center;
 }
 
+.chat-message {
+  background: linear-gradient(to left, #725088, #007681, #725088);
+  color: white;
+
+  border: 10px solid;
+  border-image-slice: 1;
+  border-width: 2px;
+
+  border-image-source: linear-gradient(to left, #d092f6, #00eaff, #d092f6);
+
+
+}
+.chat-message .message-header {
+  background: none;
+  color: white;
+}
+
+.dice-roll .dice-formula {
+  border: 1px solid #d092f6;
+}
+
+.dice-roll .dice-total {
+  border: 1px solid #d092f6;
+}
+
+#chat-controls {
+  border-top: 10px solid;
+  border-bottom: 10px solid;
+  border-left: 10px solid;
+  border-right: 10px solid;
+  border-image-slice: 1;
+  border-width: 2px;
+
+  border-image-source: linear-gradient(to left, #d092f6, #00eaff, #d092f6);
+  margin-top: 5px;
+  margin-bottom: 0;
+  margin-left: 0;
+  margin-right: 0;
+
+  box-shadow: 0 0 150px #00eaff;
+}
+
+#chat-controls .chat-control-icon {
+  margin-left: 5px;
+}
+#chat-controls .roll-type-select {
+  margin-top: 2px;
+}
+
+#chat-form {
+  border-top: 10px solid;
+  border-bottom: 10px solid;
+  border-left: 10px solid;
+  border-right: 10px solid;
+  border-image-slice: 1;
+  border-width: 2px;
+
+  border-image-source: linear-gradient(to left, #d092f6, #00eaff, #d092f6);
+  margin: 0;
+}
+
+#chat-form textarea {
+  background: rgb(89, 94, 113);
+  
+  border: 10px solid;
+  border-image-slice: 1;
+  border-width: 1px;
+
+  border-image-source: linear-gradient(to left, #d092f6, #00eaff, #d092f6);
+}
+
+#sidebar {
+  border: 10px solid;
+  border-image-slice: 1;
+  border-width: 2px;
+
+  border-image-source: linear-gradient(to left, #d092f6, #00eaff, #d092f6);
+}
+
+#sidebar-tabs {
+  --sidebar-tab-height: 30px;
+  border-bottom: 1px solid #d092f6;
+  box-shadow: 0 0 150px #00eaff;
+}
+
+#sidebar-tabs >
+.item.active {
+  border: 1px solid #d092f6;
+  box-shadow: 0 0 2px inset #d092f6;
+  
+}
+
+#sidebar-tabs >
+.item {
+  border-radius: 0 0 0 0;
+}
+
 /* Styles limited to ritualtek sheets */
 .ritualtek {
   /* ----------------------------------------- */
@@ -245,9 +342,29 @@
   font-family: "Quantico", sans-serif;
 }
 
+.ritualtek .window-header {
+  background: rgb(89, 94, 113);
+  padding: 3px;
+
+  border-top: 1px solid;
+  border-left: 1px solid;
+  border-right: 1px solid;
+  border-bottom: 0px solid;
+  border-image-slice: 1;
+  border-width: 2px;
+
+  border-image-source: linear-gradient(to left, #d092f6, #00eaff, #d092f6);
+}
+
 .ritualtek .window-content {
-  background: #444;
+  background: rgb(89, 94, 113);
   padding: 0px;
+
+  border: 10px solid;
+  border-image-slice: 1;
+  border-width: 2px;
+
+  border-image-source: linear-gradient(to left, #d092f6, #00eaff, #d092f6);
 }
 .ritualtek .sheet-header {
   -webkit-box-flex: 0;
@@ -268,7 +385,6 @@
   justify-content: flex-start;
   margin-bottom: 0px;
   margin-top: 0px;
-  background: rgb(91, 91, 91);
   color: #00eaff;
   padding: 0px;
   
@@ -302,7 +418,7 @@
   -webkit-box-flex: 0;
   -ms-flex: 0;
   flex: 0;
-  background: #444;
+  background: rgba(68, 77, 118, 0.478);
   color: #ffffff;
 }
 
@@ -310,6 +426,15 @@
   margin: 0px;
   border-top: 1px solid #00eaff;
   border-bottom: 1px solid #00eaff;
+}
+
+.ritualtek .border-gradient {
+  border-top: 10px solid;
+  border-image-slice: 1;
+  border-width: 5px;
+}
+.ritualtek .border-gradient-purple {
+  border-image-source: linear-gradient(to left, #d092f6, #00eaff, #d092f6);
 }
 
 .tabs .item.active {
@@ -320,25 +445,17 @@ a:hover {
   text-shadow: 0 0 8px #00eaff;
 }
 
+.ritualtek .rollable:hover {
+  box-shadow: 1px solid #00eaff;
+}
+
 .ritualtek .sheet-body,
 .ritualtek .sheet-body .tab,
 .ritualtek .sheet-body .tab .editor {
   height: 97%;
-  background: rgb(91, 91, 91);
   
 }
 
-.ritualtek .bottom-left-right-border {
-  border-left: 1px solid #00eaff;
-  border-bottom: 1px solid #00eaff;
-  border-right: 1px solid #00eaff;
-}
-
-.ritualtek .main {
-  border-left: 1px solid #00eaff;
-  border-bottom: 1px solid #00eaff;
-  border-right: 1px solid #00eaff;
-}
 .ritualtek .tox .tox-editor-container {
   background: #fff;
 }
@@ -350,14 +467,37 @@ a:hover {
   color: #ffffff;
 }
 
-.ritualtek .sidebar {
-  
-}
-
 .ritualtek input[name="name"] {
   color: #ffffff;
   border: 1px solid #d092f6;
   width: 170px;
+}
+
+.ritualtek input[name="system.health.value"] {
+  color: #ffffff;
+  border: 1px solid #d092f6;
+  min-width: 40px;
+  width: 40px;
+}
+.ritualtek input[name="system.health.max"] {
+  color: #ffffff;
+  border: 1px solid #d092f6;
+  min-width: 40px;
+  width: 40px;
+}
+
+.ritualtek input[name="system.tension.value"] {
+  color: #ffffff;
+  border: 1px solid #d092f6;
+  min-width: 40px;
+  width: 40px;
+}
+
+.ritualtek input[name="system.tension.max"] {
+  color: #ffffff;
+  border: 1px solid #d092f6;
+  min-width: 40px;
+  width: 40px;
 }
 
 .ritualtek input[name="system.attributes.level.value"] {
@@ -552,10 +692,10 @@ a:hover {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background: rgba(116, 116, 116, 0.478);
-  border-top: 1px solid #00eaff;
+  background: rgba(68, 77, 118, 0.478);
+  border-top: 0px solid #00eaff;
   border-right: 0px solid #00eaff;
-  border-bottom: 1px solid #00eaff;
+  border-bottom: 0px solid #00eaff;
   border-left: 0px solid #00eaff;
 }
 .ritualtek .items-list .items-header > * {

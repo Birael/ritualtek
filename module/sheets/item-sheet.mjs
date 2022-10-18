@@ -67,8 +67,11 @@ export class RitualTekItemSheet extends ItemSheet {
     
 
     var selector = document.getElementById('derivedAttribute');
-    selector.onchange = handleSelectChange;
-    selector.value = curItem.item.system.derivedAttribute;
+    if (selector) {
+      selector.onchange = handleSelectChange;
+      selector.value = curItem.item.system.derivedAttribute;
+    }
+    
 
     function handleSelectChange(event) {
       var selectElement = event.target;

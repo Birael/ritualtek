@@ -82,7 +82,9 @@ export class RitualTekActorSheet extends ActorSheet {
    */
   _prepareItems(context) {
     // Initialize containers.
-    const gear = [];
+    const weapons = [];
+    const clothing = [];
+    const items = [];
     const skills = [];
     const spells = {
       0: [],
@@ -100,9 +102,17 @@ export class RitualTekActorSheet extends ActorSheet {
     // Iterate through items, allocating to containers
     for (let i of context.items) {
       i.img = i.img || DEFAULT_TOKEN;
-      // Append to gear.
+      // Append to weapons.
+      if (i.type === 'weapon') {
+        weapons.push(i);
+      }
+      // Append to clothing.
+      if (i.type === 'clothing') {
+        clothing.push(i);
+      }
+      // Append to items.
       if (i.type === 'item') {
-        gear.push(i);
+        items.push(i);
       }
       // Append to skills.
       else if (i.type === 'skill') {
@@ -117,7 +127,9 @@ export class RitualTekActorSheet extends ActorSheet {
     }
 
     // Assign and return
-    context.gear = gear;
+    context.weapons = weapons;
+    context.clothing = clothing;
+    context.items = items;
     context.skills = skills;
     context.spells = spells;
   }
