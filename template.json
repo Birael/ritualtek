@@ -54,6 +54,80 @@
         "gui": {
           "value": 1
         }
+      },
+      "skills": {
+        "melee": {
+          "rank": 0
+        },
+        "shooting": {
+          "rank": 0
+        },
+        "gunnery": {
+          "rank": 0
+        },
+        "persuation": {
+          "rank": 0
+        },
+        "deception": {
+          "rank": 0
+        },
+        "barter": {
+          "rank": 0
+        },
+        "command": {
+          "rank": 0
+        },
+        "intuition": {
+          "rank": 0
+        },
+        "general": {
+          "rank": 0
+        },
+        "history": {
+          "rank": 0
+        },
+        "technology": {
+          "rank": 0
+        },
+        "religion": {
+          "rank": 0
+        },
+        "athletics": {
+          "rank": 0
+        },
+        "dexterity": {
+          "rank": 0
+        },
+        "sneaking": {
+          "rank": 0
+        },
+        "driving": {
+          "rank": 0
+        },
+        "computers": {
+          "rank": 0
+        },
+        "crafting": {
+          "rank": 0
+        },
+        "repair": {
+          "rank": 0
+        },
+        "trickery": {
+          "rank": 0
+        },
+        "survival": {
+          "rank": 0
+        },
+        "resilience": {
+          "rank": 0
+        },
+        "perception": {
+          "rank": 0
+        },
+        "healing": {
+          "rank": 0
+        }
       }
     },
     "npc": {

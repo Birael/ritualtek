@@ -71,6 +71,10 @@ export class RitualTekActorSheet extends ActorSheet {
     for (let [k, v] of Object.entries(context.system.abilities)) {
       v.label = game.i18n.localize(CONFIG.RITUALTEK.abilities[k]) ?? k;
     }
+    // Handle skills
+    for (let [k, v] of Object.entries(context.system.skills)) {
+      v.label = game.i18n.localize(CONFIG.RITUALTEK.skills[k]) ?? k;
+    }
   }
 
   /**
@@ -85,7 +89,6 @@ export class RitualTekActorSheet extends ActorSheet {
     const weapons = [];
     const clothing = [];
     const items = [];
-    const skills = [];
     const spells = {
       0: [],
       1: [],
@@ -114,10 +117,6 @@ export class RitualTekActorSheet extends ActorSheet {
       if (i.type === 'item') {
         items.push(i);
       }
-      // Append to skills.
-      else if (i.type === 'skill') {
-        skills.push(i);
-      }
       // Append to spells.
       else if (i.type === 'spell') {
         if (i.system.spellLevel != undefined) {
@@ -130,7 +129,6 @@ export class RitualTekActorSheet extends ActorSheet {
     context.weapons = weapons;
     context.clothing = clothing;
     context.items = items;
-    context.skills = skills;
     context.spells = spells;
   }
 

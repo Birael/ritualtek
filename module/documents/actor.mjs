@@ -93,6 +93,12 @@ export class RitualTekActor extends Actor {
       }
     }
 
+    if(data.skills) {
+      for (let [k, v] of Object.entries(data.skills)) {
+        data[k] = foundry.utils.deepClone(v);
+      }
+    }
+
     // Add level for easier access, or fall back to 0.
     if (data.attributes.level) {
       data.lvl = data.attributes.level.value ?? 0;

@@ -229,7 +229,7 @@
 }
 
 .chat-message {
-  background: linear-gradient(to left, #725088, #007681, #725088);
+  background-image: url(../images/retrofutureistic.jpg);
   color: white;
 
   border: 10px solid;
@@ -290,7 +290,9 @@
 }
 
 #chat-form textarea {
-  background: rgb(89, 94, 113);
+  background-image: url(../images/retrofutureistic.jpg);
+
+  color: white;
   
   border: 10px solid;
   border-image-slice: 1;

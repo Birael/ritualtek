@@ -1,22 +1,16 @@
-<ol class="items-list">
-  <li class="item flexrow items-header">
-    <div class="item-name">Skills</div>
-    <div class="item-name">Rank</div>
+<ol class="skills-list">
+  <li class="skill flexrow skill-header">
+    <div class="skill-name">Skill</div>
+    <div class="skill-name">Rank</div>
   </li>
-  {{#each skills as |item id|}}
-    <li class="item flexrow" data-item-id="{{item._id}}">
-      <div class="item-name">
-        <div class="item-image">
-          <a class="rollable" data-roll-type="item"><img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/></a>
-        </div>
-        <h4>{{item.name}}</h4>
+  {{#each system.skills as |skill key|}}
+    <li class="skill flexrow" data-skill-id="{{skill._id}}">
+      <div class="skill-name">
+        <label for="system.skills.{{key}}.rank">{{skill.label}}</label>
       </div>
       <div class="skillRank flexrow flex-center flex-between">
         <br>
-        <input type="text" name="item.system.skillRank" value="{{item.system.skillRank}}" data-dtype="Number"/>
-      </div>
-      <div class="item-controls">
-        <a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
+        <input type="text" name="system.skills.{{key}}.rank" value="{{skill.rank}}" data-dtype="Number"/>
       </div>
     </li>
   {{/each}}
