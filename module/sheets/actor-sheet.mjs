@@ -12,7 +12,7 @@ export class RitualTekActorSheet extends ActorSheet {
       classes: ["ritualtek", "sheet", "actor"],
       template: "systems/ritualtek/templates/actor/actor-sheet.html",
       width: 475,
-      height: 650,
+      height: 700,
       tabs: [{ navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "skills" }]
     });
   }
@@ -195,6 +195,8 @@ export class RitualTekActorSheet extends ActorSheet {
     // Calculate the character's chance of not being hit.
     let dth = this.actor.system.armor.value + this.actor.system.dodge.value;
     this.actor.update({'system.defense.value': dth});
+
+    
 
   }
 

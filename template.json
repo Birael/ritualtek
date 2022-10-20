@@ -136,7 +136,7 @@
     }
   },
   "Item": {
-    "types": ["weapon","clothing","item", "skill", "spell"],
+    "types": ["weapon","clothing","item", "spell"],
     "templates": {
       "base": {
         "description": ""
@@ -149,6 +149,7 @@
     "weapon": {
       "templates": ["base", "gear"],
       "damage": 0,
+      "skillUsed": "",
       "formula": "d20 + @phy.value"
     },
     "clothing": {
@@ -158,11 +159,6 @@
     "item": {
       "templates": ["base", "gear"],
       "quantity": 1
-    },
-    "skill": {
-      "templates": ["base"],
-      "skillRank": 1,
-      "derivedAttribute": "Physicality"
     },
     "spell": {
       "templates": ["base"],

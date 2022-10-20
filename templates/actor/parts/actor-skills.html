@@ -1,17 +1,18 @@
 <ol class="skills-list">
   <li class="skill flexrow skill-header">
-    <div class="skill-name">Skill</div>
-    <div class="skill-name">Rank</div>
+    <div class="skill-name">Skills</div>
   </li>
-  {{#each system.skills as |skill key|}}
+  <div class="skill-list-content grid grid-2col">
+    {{#each system.skills as |skill key|}}
     <li class="skill flexrow" data-skill-id="{{skill._id}}">
       <div class="skill-name">
         <label for="system.skills.{{key}}.rank">{{skill.label}}</label>
       </div>
       <div class="skillRank flexrow flex-center flex-between">
         <br>
-        <input type="text" name="system.skills.{{key}}.rank" value="{{skill.rank}}" data-dtype="Number"/>
+        <input class="skill-input" type="text" name="system.skills.{{key}}.rank" value="{{skill.rank}}" data-dtype="Number"/>
       </div>
     </li>
   {{/each}}
+  </div>
 </ol>
