@@ -39,6 +39,9 @@ export class RitualTekItem extends Item {
     const rollMode = game.settings.get('core', 'rollMode');
     const label = `[${item.type}] ${item.name}`;
 
+    
+    
+
     // If there's no roll data, send a chat message.
     if (!this.system.formula) {
       ChatMessage.create({
@@ -50,6 +53,9 @@ export class RitualTekItem extends Item {
     }
     // Otherwise, create a roll and send a chat message from it.
     else {
+      const abilityDie = "";
+      let dieCount = 0;
+
       // Retrieve roll data.
       const rollData = this.getRollData();
 

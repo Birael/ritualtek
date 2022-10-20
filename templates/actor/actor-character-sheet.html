@@ -6,21 +6,13 @@
     <img class="profile-img" src="{{actor.img}}" data-edit="img" title="{{actor.name}}" height="150" width="150"/>
     
     <div class="header-fields">
-      <div class="charname grid grid-2col flex-group-center">
+      <div class="charname grid grid-2col">
         <input name="name" type="text" value="{{actor.name}}" placeholder="Name"/>
-        <div class="resource">
-          <div class="resource-content flex-group-center">
-            <label for="system.attributes.level.value" class="resource-label">Level</label>
-            <input type="text" name="system.attributes.level.value" value="{{system.attributes.level.value}}" data-dtype="Number"/>
-          </div>
-          <div class="resource-content flex-group-center">
-            <label for="system.speed.value" class="resource-label">Speed</label>
-            <input type="text" name="system.speed.value" value="{{system.speed.value}}" data-dtype="Number" disabled=""/>
-          </div>
+        <div class="resource-content flex-group-center">
+          <label for="system.attributes.level.value" class="resource-label">Level</label>
+          <input type="text" name="system.attributes.level.value" value="{{system.attributes.level.value}}" data-dtype="Number"/>
         </div>
       </div>
-
-      
 
       {{!-- The grid classes are defined in scss/global/_grid.scss. To use,
       use both the "grid" and "grid-Ncol" class where "N" can be any number
@@ -32,20 +24,20 @@
         center all of its child elements content and text. --}}
         <div class="resource flex-group-center">
           <label for="system.health.value" class="resource-label">Health</label>
-          <div class="resource-content flexrow flex-center flex-between">
+          <div class="resource-content health flexrow flex-center flex-between">
             <input type="text" name="system.health.value" value="{{system.health.value}}" data-dtype="Number"/>
             <span> / </span>
             <input type="text" name="system.health.max" value="{{system.health.max}}" data-dtype="Number" disabled=""/>
           </div>
           <label for="system.tension.value" class="resource-label">Tension</label>
-          <div class="resource-content flexrow flex-center flex-between">
+          <div class="resource-content tension flexrow flex-center flex-between">
             <input type="text" name="system.tension.value" value="{{system.tension.value}}" data-dtype="Number"/>
             <span> / </span>
             <input type="text" name="system.tension.max" value="{{system.tension.max}}" data-dtype="Number" disabled=""/>
           </div>
         </div>
         <div class="resource flexcol flex-group-center">
-          <br>
+          
           <div class="resource-content flexrow flex-center flex-between">
             <label for="system.armor.value" class="resource-label">Armor</label>
             <input type="text" name="system.armor.value" value="{{system.armor.value}}" data-dtype="Number" disabled=""/>
@@ -54,12 +46,15 @@
             <label for="system.dodge.value" class="resource-label">Dodge</label>
             <input type="text" name="system.dodge.value" value="{{system.dodge.value}}" data-dtype="Number" disabled=""/>
           </div>
-          <br>
+          
           <div class="resource-content">
             <label for="system.defense.value" class="resource-label">Defense Rating</label>
             <input type="text" name="system.defense.value" value="{{system.defense.value}}" data-dtype="Number" disabled="">
           </div>
-          
+          <div class="resource-content flex-group-center">
+            <label for="system.speed.value" class="resource-label">Speed</label>
+            <input type="text" name="system.speed.value" value="{{system.speed.value}}" data-dtype="Number" disabled=""/>
+          </div>
         </div>
       </div>
     </div>
@@ -76,7 +71,7 @@
   </nav>
 
   {{!-- Sheet Body --}}
-  <section class="sheet-body bottom-left-right">
+  <section class="sheet-body">
 
     {{!-- Owned Skills Tab --}}
     <div class="tab skills" data-group="primary" data-tab="skills">
@@ -86,12 +81,15 @@
           {{!-- The grid classes are defined in scss/global/_grid.scss. To use,
           use both the "grid" and "grid-Ncol" class where "N" can be any number
           from 1 to 12 and will create that number of columns.  --}}
+          <ol class="abilities-list">
+            <li class="abilities flexrow skill-header">
+              <div class="skill-name">Abilities</div>
+            </li>
           <div class="abilities flexcol">
             {{#each system.abilities as |ability key|}}
             <div class="ability flexcol flex-group-center">
-              <label for="system.abilities.{{key}}.value" class="resource-label flexlarge align-left" data-roll="d20+@abilities.{{key}}.mod" data-label="{{ability.label}}">{{ability.label}}</label>
+              <label for="system.abilities.{{key}}.value" class="resource-label flexlarge align-left">{{ability.label}}</label>
               <input type="text" name="system.abilities.{{key}}.value" value="{{ability.value}}" data-dtype="Number"/>
-              
             </div>
             {{/each}}
           </div>

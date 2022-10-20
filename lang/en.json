@@ -18,5 +18,30 @@
   "RITUALTEK.EffectEdit": "Edit Effect",
   "RITUALTEK.EffectDelete": "Delete Effect",
 
-  "RITUALTEK.Add": "Add"
+  "RITUALTEK.Add": "Add",
+
+  "RITUALTEK.SkillMelee": "Melee",
+  "RITUALTEK.SkillShooting": "Shooting",
+  "RITUALTEK.SkillGunnery": "Gunnery",
+  "RITUALTEK.SkillPersuation": "Persuation",
+  "RITUALTEK.SkillDeception": "Deception",
+  "RITUALTEK.SkillBarter": "Barter",
+  "RITUALTEK.SkillCommand": "Command",
+  "RITUALTEK.SkillIntuition": "Intuition",
+  "RITUALTEK.SkillGeneral": "General",
+  "RITUALTEK.SkillHistory": "History",
+  "RITUALTEK.SkillTechnology": "Technology",
+  "RITUALTEK.SkillReligion": "Religion",
+  "RITUALTEK.SkillAthletics": "Athletics",
+  "RITUALTEK.SkillDexterity": "Dexterity",
+  "RITUALTEK.SkillSneaking": "Sneaking",
+  "RITUALTEK.SkillDriving": "Driving",
+  "RITUALTEK.SkillComputers": "Computers",
+  "RITUALTEK.SkillCrafting": "Crafting",
+  "RITUALTEK.SkillRepair": "Repair",
+  "RITUALTEK.SkillTrickery": "Trickery",
+  "RITUALTEK.SkillSurvival": "Survival",
+  "RITUALTEK.SkillResilience": "Resilience",
+  "RITUALTEK.SkillPerception": "Perception",
+  "RITUALTEK.SkillHealing": "Healing"
 }

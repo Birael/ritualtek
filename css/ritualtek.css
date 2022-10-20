@@ -229,7 +229,7 @@
 }
 
 .chat-message {
-  background: linear-gradient(to left, #725088, #007681, #725088);
+  background-image: url(../images/retrofutureistic.jpg);
   color: white;
 
   border: 10px solid;
@@ -290,7 +290,9 @@
 }
 
 #chat-form textarea {
-  background: rgb(89, 94, 113);
+  background-image: url(../images/retrofutureistic.jpg);
+
+  color: white;
   
   border: 10px solid;
   border-image-slice: 1;
@@ -353,18 +355,22 @@
   border-image-slice: 1;
   border-width: 2px;
 
-  border-image-source: linear-gradient(to left, #d092f6, #00eaff, #d092f6);
+  border-image-source: linear-gradient(to left, #d800A6, #31E1F7, #d800A6);
+
+  
 }
 
 .ritualtek .window-content {
-  background: rgb(89, 94, 113);
+  background-image: url(../images/csbg.svg);
+  background-size: cover;
+  background-position: center;
   padding: 0px;
 
   border: 10px solid;
   border-image-slice: 1;
   border-width: 2px;
 
-  border-image-source: linear-gradient(to left, #d092f6, #00eaff, #d092f6);
+  border-image-source: linear-gradient(to left, #d800A6, #31E1F7, #d800A6);
 }
 .ritualtek .sheet-header {
   -webkit-box-flex: 0;
@@ -390,18 +396,26 @@
   
 }
 
+.sheet header.sheet-header .profile-img {
+  margin-left: 10px;
+  margin-right: 0px;
+  border-color: #00eaff;
+}
+
 .ritualtek .sheet-header .profile-img {
   -webkit-box-flex: 0;
-  -ms-flex: 0 0 150px;
+  -ms-flex: 0 0 160px;
   flex: 0 0 150px;
   height: 150px;
-  margin-right: 10px;
-  border-width: 0px;
+  border-width: 3px;
 }
 .ritualtek .sheet-header .header-fields {
+  padding-left: 10px;
   -webkit-box-flex: 1;
   -ms-flex: 1;
   flex: 1;
+  background:rgba(0, 0, 0, 0.5)
+  
 }
 .ritualtek .sheet-header h1.charname {
   height: 50px;
@@ -452,8 +466,12 @@ a:hover {
 .ritualtek .sheet-body,
 .ritualtek .sheet-body .tab,
 .ritualtek .sheet-body .tab .editor {
-  height: 97%;
   
+  
+}
+
+.ritualtek .sheet-body {
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .ritualtek .tox .tox-editor-container {
@@ -463,8 +481,16 @@ a:hover {
   padding: 0 8px;
 }
 .ritualtek .resource-label {
+  color: #00eaff;
   
-  color: #ffffff;
+}
+
+.ritualtek .health {
+  display: block;
+}
+
+.ritualtek .tension {
+  display: block;
 }
 
 .ritualtek input[name="name"] {
@@ -578,6 +604,59 @@ a:hover {
 
 .ritualtek input:disabled {
   border: none;
+}
+
+.ritualtek .sidebar {
+  margin-top: 0px;
+  
+}
+
+.ritualtek .abilities-list {
+  padding-right: 1.5em;
+}
+
+.ritualtek .ability {
+  padding: 5px;
+}
+
+.ritualtek .abilities {
+  color: white;
+}
+
+.ritualtek .skills-list {
+  padding-right: 1.5em;
+}
+
+.ritualtek .skill-header {
+  color: #00eaff;
+  margin-bottom: 5px;
+  border-bottom: 1px solid #00eaff;
+  padding-left: 2px;
+  text-align: center;
+}
+
+.ritualtek .skill-list-content {
+  row-gap: 2px;
+}
+
+.ritualtek .skill-name {
+  color: #00eaff;
+}
+
+.ritualtek .skill {
+  color: white;
+}
+
+.ritualtek .abilities {
+  color: white;
+}
+
+.ritualtek input[class="skill-input"] {
+  flex: none;
+  color: #ffffff;
+  border: 1px solid #d092f6;
+  min-width: 40px;
+  width: 40px;
 }
 
 .ritualtek .items-header {
