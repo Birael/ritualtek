@@ -6,7 +6,7 @@
     {{#each system.skills as |skill key|}}
     <li class="skill flexrow" data-skill-id="{{skill._id}}">
       <div class="skill-name">
-        <label for="system.skills.{{key}}.rank">{{skill.label}}</label>
+        <label class="rollable" for="system.skills.{{key}}.rank">{{skill.label}}</label>
       </div>
       <div class="skillRank flexrow flex-center flex-between">
         <br>

@@ -47,7 +47,7 @@
             <input type="text" name="system.dodge.value" value="{{system.dodge.value}}" data-dtype="Number" disabled=""/>
           </div>
           
-          <div class="resource-content">
+          <div class="resource-content flexcol flex-group-center">
             <label for="system.defense.value" class="resource-label">Defense Rating</label>
             <input type="text" name="system.defense.value" value="{{system.defense.value}}" data-dtype="Number" disabled="">
           </div>
@@ -75,26 +75,20 @@
 
     {{!-- Owned Skills Tab --}}
     <div class="tab skills" data-group="primary" data-tab="skills">
-      <section class="grid grid-3col">
-        <aside class="sidebar">
-
-          {{!-- The grid classes are defined in scss/global/_grid.scss. To use,
-          use both the "grid" and "grid-Ncol" class where "N" can be any number
-          from 1 to 12 and will create that number of columns.  --}}
-          <ol class="abilities-list">
-            <li class="abilities flexrow skill-header">
-              <div class="skill-name">Abilities</div>
-            </li>
-          <div class="abilities flexcol">
-            {{#each system.abilities as |ability key|}}
-            <div class="ability flexcol flex-group-center">
-              <label for="system.abilities.{{key}}.value" class="resource-label flexlarge align-left">{{ability.label}}</label>
-              <input type="text" name="system.abilities.{{key}}.value" value="{{ability.value}}" data-dtype="Number"/>
-            </div>
-            {{/each}}
-          </div>
-        </aside>
-
+      <ol class="abilities-list">
+        <li class="abilities flexrow skill-header">
+          <div class="skill-name">Abilities</div>
+        </li>
+      <div class="abilities flexrow">
+        {{#each system.abilities as |ability key|}}
+        <div class="ability flexcol flex-group-center">
+          <label for="system.abilities.{{key}}.value" class="attribute-label flexlarge align-left">{{ability.label}}</label>
+          <input type="text" name="system.abilities.{{key}}.value" value="{{ability.value}}" data-dtype="Number"/>
+          <img src="" id="system.abilities.{{key}}" width="50" height="50">
+        </div>
+        {{/each}}
+      </div>
+      <section class="skillGrid grid grid-2col">
         {{!-- For the main skills list, span the right two columns --}}
         <section class="main grid-span-2">
           {{!-- This is a Handlebars partial. They're stored in the `/parts` folder next to this sheet, and defined in module/helpers/templates.mjs --}}

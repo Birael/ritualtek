@@ -37,22 +37,28 @@
       },
       "abilities": {
         "phy": {
-          "value": 1
+          "value": 1,
+          "sides": 4
         },
         "men": {
-          "value": 1
+          "value": 1,
+          "sides": 4
         },
         "per": {
-          "value": 1
+          "value": 1,
+          "sides": 4
         },
         "acu": {
-          "value": 1
+          "value": 1,
+          "sides": 4
         },
         "awa": {
-          "value": 1
+          "value": 1,
+          "sides": 4
         },
         "gui": {
-          "value": 1
+          "value": 1,
+          "sides": 4
         }
       },
       "skills": {
@@ -65,7 +71,7 @@
         "gunnery": {
           "rank": 0
         },
-        "persuation": {
+        "persuasion": {
           "rank": 0
         },
         "deception": {
@@ -150,7 +156,7 @@
       "templates": ["base", "gear"],
       "damage": 0,
       "skillUsed": "",
-      "formula": "d20 + @phy.value"
+      "formula": ""
     },
     "clothing": {
       "templates": ["base", "gear"],
