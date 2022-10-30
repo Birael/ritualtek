@@ -334,6 +334,22 @@
   /* ----------------------------------------- */
   /* Example style for ritualtek (can be removed if not needed) */
 }
+
+.ritualtek img {
+  border: 0px;
+}
+
+.ritualtek .center {
+  text-align: center;
+}
+
+::-webkit-scrollbar-thumb {
+  outline: none;
+  border-radius: 3px;
+  background: #00eaff;
+  border: 1px solid var(#d092f6);
+}
+
 .ritualtek .bottom-left-right {
   border-bottom: 1px #00eaff;
   border-left: 1px #00eaff;
@@ -463,15 +479,8 @@ a:hover {
   box-shadow: 1px solid #00eaff;
 }
 
-.ritualtek .sheet-body,
-.ritualtek .sheet-body .tab,
-.ritualtek .sheet-body .tab .editor {
-  
-  
-}
-
 .ritualtek .sheet-body {
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: #d092f636;
 }
 
 .ritualtek .tox .tox-editor-container {
@@ -482,7 +491,11 @@ a:hover {
 }
 .ritualtek .resource-label {
   color: #00eaff;
-  
+  margin-bottom: 0px;
+}
+.ritualtek .attribute-label {
+  color: #00eaff;
+  margin-bottom: 7px;
 }
 
 .ritualtek .health {
@@ -613,14 +626,20 @@ a:hover {
 
 .ritualtek .abilities-list {
   padding-right: 1.5em;
+  
 }
 
 .ritualtek .ability {
-  padding: 5px;
+  padding: 4px;
 }
 
 .ritualtek .abilities {
   color: white;
+  
+}
+
+.ritualtek .skillGrid {
+  margin: 0px;
 }
 
 .ritualtek .skills-list {

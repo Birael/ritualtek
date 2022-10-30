@@ -30,9 +30,18 @@
     {{!-- Attributes Tab --}}
     <div class="tab attributes" data-group="primary" data-tab="attributes">
       {{!-- As you add new fields, add them in here! --}}
+      <div class="derivedSkill">
+        <label class="resource-label" for="derived-skills">Skill</label>
+        <select name="derived-skills" id="derived-skills" onchange="changeDerivedSkill()">
+          <option value="melee">Melee</option>
+          <option value="shooting">Shooting</option>
+          <option value="gunnery">Gunnery</option>
+        </select>
+      </div>
+
       <div class="resource">
-        <label class="resource-label">Roll Formula</label>
-        <input type="text" name="system.formula" value="{{system.formula}}" data-dtype="String"/>
+        <label class="resource-label">Damage</label>
+        <input type="text" name="system.damage" value="{{system.damage}}" data-dtype="String"/>
       </div>
     </div>
   </section>

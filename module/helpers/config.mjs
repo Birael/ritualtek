@@ -26,7 +26,7 @@ RITUALTEK.skills = {
   "melee": "RITUALTEK.SkillMelee",
   "shooting": "RITUALTEK.SkillShooting",
   "gunnery": "RITUALTEK.SkillGunnery",
-  "persuation": "RITUALTEK.SkillPersuation",
+  "persuasion": "RITUALTEK.SkillPersuasion",
   "deception": "RITUALTEK.SkillDeception",
   "barter": "RITUALTEK.SkillBarter",
   "command": "RITUALTEK.SkillCommand",

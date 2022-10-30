@@ -27,6 +27,8 @@ export class RitualTekItemSheet extends ItemSheet {
 
   /* -------------------------------------------- */
 
+  
+
   /** @override */
   getData() {
     // Retrieve base data structure.
@@ -59,6 +61,32 @@ export class RitualTekItemSheet extends ItemSheet {
     if (!this.isEditable) return;
 
     // Roll handlers, click handlers, etc. would go here.
-    
+    document.getElementById("derived-skills").onchange = function() {changeDerivedSkill()}
+
+    var itemSkill = this;
+
+    function changeDerivedSkill() {
+      
+      var derivedSkills = document.getElementById("derived-skills");
+      if(derivedSkills.value == "melee") {
+        itemSkill.object.system.skillUsed = "melee"
+        console.log("changed to melee");
+        console.log(itemSkill);
+      }
+      if(derivedSkills.value == "shooting") {
+        itemSkill.object.system.skillUsed = "shooting"
+        console.log("changed to shooting");
+        console.log(itemSkill);
+      }
+      if(derivedSkills.value == "gunnery") {
+        itemSkill.object.system.skillUsed = "gunnery"
+        console.log("changed to gunnery");
+        console.log(itemSkill);
+      }
+    }
+    console.log(itemSkill);
+
   }
+
+  
 }

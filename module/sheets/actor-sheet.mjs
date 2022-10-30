@@ -11,7 +11,7 @@ export class RitualTekActorSheet extends ActorSheet {
     return mergeObject(super.defaultOptions, {
       classes: ["ritualtek", "sheet", "actor"],
       template: "systems/ritualtek/templates/actor/actor-sheet.html",
-      width: 475,
+      width: 500,
       height: 700,
       tabs: [{ navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "skills" }]
     });
@@ -31,6 +31,7 @@ export class RitualTekActorSheet extends ActorSheet {
     // sheets are the actor object, the data object, whether or not it's
     // editable, the items array, and the effects array.
     const context = super.getData();
+    
 
     // Use a safe clone of the actor data for further operations.
     const actorData = this.actor.toObject(false);
@@ -196,9 +197,42 @@ export class RitualTekActorSheet extends ActorSheet {
     let dth = this.actor.system.armor.value + this.actor.system.dodge.value;
     this.actor.update({'system.defense.value': dth});
 
-    
+    // Calculate the character's ability dice.
+    function calculateAbilities(ability, abilityString) {
+      if(ability.value === 1) {
+        ability.sides = 4;
+        document.getElementById(abilityString).src = "icons/dice/d4black.svg"
+      }
+      else if(ability.value === 2) {
+        ability.sides = 6;
+        document.getElementById(abilityString).src = "icons/dice/d6black.svg"
+      }
+      else if(ability.value === 3) {
+        ability.sides = 8;
+        document.getElementById(abilityString).src = "icons/dice/d8black.svg"
+      }
+      else if(ability.value === 4) {
+        ability.sides = 10;
+        document.getElementById(abilityString).src = "icons/dice/d10black.svg"
+      }
+      else{
+        ability.sides = 12;
+        document.getElementById(abilityString).src = "icons/dice/d12black.svg"
+      }
+    }
 
+    calculateAbilities(this.actor.system.abilities.phy, "system.abilities.phy");
+    calculateAbilities(this.actor.system.abilities.men, "system.abilities.men");
+    calculateAbilities(this.actor.system.abilities.per, "system.abilities.per");
+    calculateAbilities(this.actor.system.abilities.acu, "system.abilities.acu");
+    calculateAbilities(this.actor.system.abilities.awa, "system.abilities.awa");
+    calculateAbilities(this.actor.system.abilities.gui, "system.abilities.gui");
+
+    console.log(this);
   }
+
+  
+  
 
   /**
    * Handle creating a new Owned Item for the actor using initial data defined in the HTML dataset

@@ -104,13 +104,7 @@ export class RitualTekActor extends Actor {
       data.lvl = data.attributes.level.value ?? 0;
     }
 
-    let abilityDie = "";
-    if (this.actor.system.phy.value === 1) { abilityDie = "1d4" }
-    if (this.actor.system.phy.value === 2) { abilityDie = "1d6" }
-    if (this.actor.system.phy.value === 3) { abilityDie = "1d8" }
-    if (this.actor.system.phy.value === 4) { abilityDie = "1d10" }
-    if (this.actor.system.phy.value === 5) { abilityDie = "1d12" }
-    if (this.actor.system.phy.value === 6) { abilityDie = "1d14" }
+    
   }
 
   /**
